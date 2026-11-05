@@ -1,0 +1,68 @@
+/* Kompletnie nowy, nowoczesny wygląd - automatycznie wspierający tryb jasny i ciemny */
+
+body { 
+    /* Usunięto sztywny jasny kolor tła i tekstu - Bootstrap sam je teraz dobierze */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Pasek nawigacyjny */
+.navbar { 
+    min-height: 60px; 
+    font-size: 16px; 
+    /* Ciemny gradient zostaje bez zmian, świetnie pasuje do obu trybów */
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Lekko wzmocniony cień */
+}
+
+/* Główna sekcja robocza - styl "karty" (Card UI) */
+.sekcja1 {
+    /* Zmienna Bootstrap: w trybie jasnym będzie biała, w ciemnym ciemnoszara */
+    background-color: var(--bs-body-bg);
+    border-radius: 12px; 
+    border: 1px solid var(--bs-border-color-translucent); /* Automatyczny kolor ramki */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08); /* Nowoczesny, rozmyty cień */
+    padding: 30px;
+    margin-top: 90px; 
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; 
+}
+
+/* Nowoczesna stopka */
+.page-footer {
+    background-color: var(--bs-body-bg) !important;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--bs-secondary-color) !important; /* Automatyczny stłumiony kolor (szary/jasnoszary) */
+    border-top: 1px solid var(--bs-border-color) !important;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    height: auto;
+}
+
+/* Opcjonalnie: poprawa wyglądu tabel z logami z zadania 3 */
+.table {
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+}
+
+@keyframes pulse { 
+    0% { transform: scale(1); opacity: 1; } 
+    50% { transform: scale(1.3); opacity: 0.6; } 
+    100% { transform: scale(1); opacity: 1; } 
+}
+.pulse-anim { animation: pulse 1s infinite; }
